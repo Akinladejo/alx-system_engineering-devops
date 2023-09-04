@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$1" | tr -s ' ' '\n' | tac | head -1
