@@ -1,0 +1,2 @@
+#!/bi/bash
+tr Ac Ze < input.txt
