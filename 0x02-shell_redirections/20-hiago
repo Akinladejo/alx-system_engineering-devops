@@ -1,2 +1,2 @@
 #!/bin/bash
-tr -d '[:cC]' < input.txt
+echo "Remove all c and C letters from input" | tr -d 'cC'
