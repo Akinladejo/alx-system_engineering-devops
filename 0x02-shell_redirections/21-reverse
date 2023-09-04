@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Reverse` input" | rev | cat
+echo "$1" | rev | tr -d '\n'
