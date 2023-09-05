@@ -1,0 +1,2 @@
+#!/bi/bash
+compgen -v -e -A function
