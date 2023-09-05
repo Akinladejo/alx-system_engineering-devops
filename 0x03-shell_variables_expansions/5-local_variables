@@ -1,2 +1,2 @@
 #!/bin/bash
-compgen -v | grep -E "function"
+set -o posix | less
