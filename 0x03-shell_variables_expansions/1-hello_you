@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "hello $(whoami)"
+echo "hello $(whoami)" | grep -q root || echo "You are not root."
