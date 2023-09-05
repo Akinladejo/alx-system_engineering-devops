@@ -1,2 +1,2 @@
-#!/bi/bash
+#!/bin/bash
 compgen -v -e -A function
