@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$NUM" | read -r && printf "%.2f\n" "$REPLY"
+printf "%2f\n" $NUM
