@@ -1,2 +1,2 @@
 #!/bin/bash
-compgen -v -e -A function
+compgen -v | grep -E "function"
