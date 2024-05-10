@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Update the hosts file to configure localhost and facebook.com
-echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts
-echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts
+# Backup the original hosts file
+sudo cp /etc/hosts /etc/hosts.bak
+
+# Modify the hosts file
+sudo sed -i 's/localhost$/localhost\n127.0.0.2/' /etc/hosts
+sudo sed -i 's/facebook.com$/facebook.com\n8.8.8.8/' /etc/hosts
 
 # Flush DNS cache
-sudo systemd-resolve --flush-caches
-
-echo "Configuration completed successfully."
+sudo systemctl restart systemd-resolved
