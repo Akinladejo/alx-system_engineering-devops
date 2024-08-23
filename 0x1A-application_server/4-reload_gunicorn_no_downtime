@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Gracefully updates Gunicorn workers
+
+# Check if Gunicorn processes are running
+if pgrep gunicorn >/dev/null 2>&1; then
+    # Use pkill to send HUP signal to Gunicorn processes
+    pkill -HUP gunicorn
+else
+    echo "No Gunicorn processes found."
+fi
